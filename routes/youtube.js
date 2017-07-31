@@ -32,6 +32,8 @@ router.post('/', function(req, res) {
   // });
 });
 
+/* REMOVE THE KEY WHILE PUSHING INTO THE GIT */
+
 router.post('/info', (req, res, next) => {
   getStream(req.body.url).on('info', function(data) {
     res.send(data);
@@ -49,7 +51,7 @@ router.get('/search/:search', (req, res) => {
       console.log(err);
       res.send([]);
     } else {
-      res.send(results)
+      res.send(results);
     }
   });
   // res.send("search")
