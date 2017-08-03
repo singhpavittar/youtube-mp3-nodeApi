@@ -6,6 +6,7 @@ const ytdl = require('ytdl-core');
 var youtubeStream = require('youtube-audio-stream-2');
 const ffmpeg = require('fluent-ffmpeg');
 const youtubeSearch = require('youtube-search');
+const CONST = require('../api/constants/constants');
 
 const getStream = (url) => youtubeStream(url);
 
@@ -41,12 +42,8 @@ router.post('/info', (req, res, next) => {
 });
 
 router.get('/search/:search', (req, res) => {
-  const opts = {
-    maxResults: 10,
-    key: 'AIzaSyCoRaVdzsqAe2k_jeDeMVzlVUyL0UKRrqI'
-  };
   // res.send("tagId is set to " + req.params.tagId);
-  youtubeSearch(req.params.search, opts, function(err, results) {
+  youtubeSearch(req.params.search, CONST.youtube_option, function(err, results) {
     if (err) {
       console.log(err);
       res.send([]);

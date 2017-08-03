@@ -4,6 +4,10 @@ var constants = {
   },
   DEFAULT_RESPONSE: {
     message: "Api is running"
+  },
+  youtube_option: {
+    maxResults: 10,
+    key: 'AIzaSyCoRaVdzsqAe2k_jeDeMVzlVUyL0UKRrqI'
   }
 };
 
