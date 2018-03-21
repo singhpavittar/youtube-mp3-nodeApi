@@ -22,6 +22,13 @@ var constants = {
       'User-Agent': 'Request-Promise'
     },
     json: true // Automatically parses the JSON string in the response
+  },
+  info: {
+    uri: "https://www.googleapis.com/youtube/v3/videos?part=snippet&key=AIzaSyCoRaVdzsqAe2k_jeDeMVzlVUyL0UKRrqI&id=",
+    headers: {
+      'User-Agent': 'Request-Promise'
+    },
+    json: true // Automatically parses the JSON string in the response
   }
 };
 
