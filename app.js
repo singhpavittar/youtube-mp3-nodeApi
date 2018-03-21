@@ -1,3 +1,4 @@
+const compression = require('compression');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,9 +12,10 @@ const CONST = require('./api/constants/constants');
 
 var app = express();
 
+app.use(compression());
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

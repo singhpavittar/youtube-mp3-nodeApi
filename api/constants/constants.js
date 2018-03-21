@@ -15,6 +15,13 @@ var constants = {
       'User-Agent': 'Request-Promise'
     },
     json: true // Automatically parses the JSON string in the response
+  },
+  related_option: {
+    uri: 'https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&key=AIzaSyCoRaVdzsqAe2k_jeDeMVzlVUyL0UKRrqI&maxResults=25&relatedToVideoId=',
+    headers: {
+      'User-Agent': 'Request-Promise'
+    },
+    json: true // Automatically parses the JSON string in the response
   }
 };
 

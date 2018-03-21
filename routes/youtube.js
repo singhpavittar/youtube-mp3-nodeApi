@@ -69,4 +69,14 @@ router.get('/mp3', (req, res) => {
   mp3.download('https://www.youtube.com/watch?v=wnJ6LuUFpMo', 'LXJS 2013 Keynote').pipe(res);
 });
 
+router.get('/related', (req, res) => {
+  let related = CONST.related_option;
+  related.uri += req.query.id;
+  rp(CONST.related_option).then(function(repos) {
+    res.send(repos);
+  }).catch(function(err) {
+    res.send(err);
+  });
+});
+
 module.exports = router;
